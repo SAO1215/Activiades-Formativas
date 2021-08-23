@@ -1,6 +1,6 @@
 # TC1031_Estructuras_Formativas
 
-Repositorio de ejemplo
+Repositorio Olivia Araceli Morales Quezada A01707371
 
 # Correcciones en actividades
  ### Act 1.1 Funciones Iterativas, Recursivas y su análisis de Complejidad/
