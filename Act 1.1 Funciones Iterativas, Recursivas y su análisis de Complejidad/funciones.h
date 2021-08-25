@@ -15,10 +15,13 @@
 class Funciones
 {
 public:
+    Funciones();
     int sumaIterativa(int n);
     int sumaRecursiva(int n);
     int sumaDirecta(int n);
 };
+
+Funciones::Funciones(){}
 
 int Funciones::sumaIterativa(int n){
 	int sum = 0;
