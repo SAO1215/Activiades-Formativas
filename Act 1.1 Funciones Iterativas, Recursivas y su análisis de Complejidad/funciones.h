@@ -44,4 +44,4 @@ int Funciones::sumaDirecta(int n){
   return sum;
 }
 
-#endif
+#endif /* FUNCIONES_H_ */
