@@ -1,4 +1,4 @@
-# TC1031_Estructuras_Formativa 👾�
+# TC1031_Estructuras_Formativa 👾
 
 Repositorio Olivia Araceli Morales Quezada A01707371
 
