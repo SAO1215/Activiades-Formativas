@@ -8,5 +8,4 @@ Repositorio Olivia Araceli Morales Quezada A01707371
 * Análisis de complejidad completo.
 
 ### Act 1.2 Algoritmos de Búsqueda y Ordenamiento
-* Se corrigió error en la función _busqSecuencial_, ahora debería estar correcto, en espera de segunda revisión.
-
+* Se corrigió error en la función _busqSecuencial_ (linea 140), ahora debería estar correcto, en espera de segunda revisión.
