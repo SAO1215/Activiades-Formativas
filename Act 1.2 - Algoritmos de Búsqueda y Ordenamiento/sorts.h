@@ -137,7 +137,7 @@ void Sorts<T>::copyArray(vector<T> &A, vector<T> &B, int low, int high) {
 //Esta funcion busca un elemento con el metodo secuencial
 template <class T>
 int Sorts<T>::busqSecuencial(vector<T> &v, int val) {
-    for (int i = v.size() - 1; i > 0; i--) {
+    for (int i = v.size(); i >= 0; i--) {
         if (val == v[i])
             return i;
     }
