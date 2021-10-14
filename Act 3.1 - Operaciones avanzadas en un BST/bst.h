@@ -1,7 +1,7 @@
 /*
  *
  * Programación de estructuras de datos y algoritmos fundamentales (TC1031.2)
- * Formativa 3.1 - Implementación de una lista ligada simple
+ * Formativa 3.1 - Operaciones avanzadas en un BST
  * Olivia Araceli Morales Quezada
  * A01707371
  *
