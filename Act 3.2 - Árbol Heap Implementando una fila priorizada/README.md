@@ -16,14 +16,13 @@ Esta funcion quita un elemto en el arbol, por lo que al igual que el metodo ante
 
 **Análisis de complejidad temporal**
 
-Esta funcion regresa el mayor prioridad en el arbol, solo usa una operacion y es constante en todos los casos, asi que su complejidad es de O(1).
+Esta funcion regresa el dato de mayor prioridad en el arbol, solo usa una operacion y es constante en todos los casos, asi que su complejidad es de O(1).
 
 ## empty
 
 **Análisis de complejidad temporal**
 
 Esta funcion verifica que este vacio, igualando el contador a 0, es solo una operacion, por lo que su complejidad es de O(1) en el peor de los casos.
-.
 
 ## size
 
