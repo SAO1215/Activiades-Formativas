@@ -1,7 +1,6 @@
-/*
- *
+ /*
  * Programación de estructuras de datos y algoritmos fundamentales (TC1031.2)
- * Formativa 3.1 - Operaciones avanzadas en un BST
+ * Formativa 3.1 - Implementación de una lista ligada simple
  * Olivia Araceli Morales Quezada
  * A01707371
  *
@@ -33,13 +32,15 @@ public:
 	bool find(T);
 	void remove(T);
 	void removeChilds();
+
 	void inorder(stringstream&) const;
 	void preorder(stringstream&) const;
   void postorder(stringstream&) const;
   void LbL(stringstream&) const;
 
-  int height();
+  int height() const;
   void ancestors(stringstream&, T) const;
+  void showlevel(stringstream&, int) const;
   int whatlevelamI(T);
 
 	friend class BST<T>;
@@ -173,6 +174,22 @@ void Node<T>::removeChilds() {
 }
 
 template <class T>
+int Node<T>::height() const {
+	int le = 0;
+	int ri = 0;
+	if (left != 0){
+		le = left->height() + 1;
+	}
+	if (right != 0) {
+		ri = right->height() +1;
+	}
+	if (le == 0 && ri == 0){
+		return 1;
+	}
+	return (ri > le) ? ri : le;
+}
+
+template <class T>
 void Node<T>::inorder(stringstream &aux) const {
 	if (left != 0) {
 		left->inorder(aux);
@@ -214,30 +231,27 @@ void Node<T>::postorder(stringstream &aux) const {
 }
 
 template <class T>
-void Node<T>::LbL(stringstream &aux) const {
-	aux << value;
-	if (left != 0) {
-    aux << " ";
-		left->LbL(aux);
+void Node<T>::showlevel(stringstream &aux, int level) const {
+	if(level == 0){
+		if (aux.tellp() != 1) {
+				aux << " ";
+		}
+		aux << value;
 	}
-	if (right != 0) {
-    aux << " ";
-		right->LbL(aux);
+  if (left != 0) {
+		left->showlevel(aux, level -1);
+	}
+  if (right != 0) {
+		right->showlevel(aux, level -1);
 	}
 }
 
 template <class T>
-int Node<T>::height() {
-  int le =0 , ri = 0;
-  if (left != 0)
-        le = left->height() + 1;
-  if (right != 0)
-        ri = right->height() + 1;
-  if(le > ri)
-        level = le;
-  else
-        level = ri;
-  return level;
+void Node<T>::LbL(stringstream &aux) const {
+	int level = height();
+  for(int i = 0; i < level; i++){
+			showlevel(aux, i);
+	}
 }
 
 template <class T>
@@ -420,7 +434,7 @@ string BST<T>::visit() {
 
 template <class T>
 int BST<T>::height() const {
-  return root->height() + 1;
+  return root->height();
 }
 
 template <class T>
